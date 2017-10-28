@@ -30,4 +30,8 @@ def ind0(arr):
 
 
 
-print(getImageArray("rectangle.png"))
+def main():
+    print(getImageArray("rectangle.png"))
+
+
+if __name__ == "__main__": main()
