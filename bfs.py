@@ -143,7 +143,7 @@ def conSort(img):
 
 def useImage(filename):
     img = edgeDetection.getImageArray(filename)
-    print(img)
+    #print(img)
     
     newImg = conSort(img)
     maxDist = 0
@@ -155,11 +155,15 @@ def useImage(filename):
         if dist > maxDist:
             maxDist = dist
             biggestJump = i
-    print(maxDist, biggestJump)
+    #print(maxDist, biggestJump)
 
     return newImg
 
 def main():
-    print(useImage('star.png'))
+    path = useImage('ePicture.png')
+    cutDown = 5
+    p = [path[i] for i in range(len(path)) if i%cutDown == 0]
+    print(p)
+
 
 if __name__ == "__main__": main()
