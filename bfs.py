@@ -169,8 +169,8 @@ def main():
     path = useImage('ePicture.png')
     cutDown = 5
     p = [path[i] for i in range(len(path)) if i%cutDown == 0]
-    x = [ind0(i) for i in path]
-    y = [ind1(i) for i in path]
+    x = [ind0(i) for i in p]
+    y = [ind1(i) for i in p]
     print(x,y)
     #print(p)
 
