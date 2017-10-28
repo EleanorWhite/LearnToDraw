@@ -18,7 +18,6 @@ def getImageArray(filename):
     for i in range(len(redImg)):
         for j in range(len(redImg[i])):
             if redImg[i][j] == 0:
-                print("Found 0!")
                 coords.append((i,j))
 
 
