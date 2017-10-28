@@ -159,11 +159,20 @@ def useImage(filename):
 
     return newImg
 
+def ind0(arr):
+    return arr[0]
+
+def ind1(arr):
+    return arr[1]
+
 def main():
     path = useImage('ePicture.png')
     cutDown = 5
     p = [path[i] for i in range(len(path)) if i%cutDown == 0]
-    print(p)
+    x = [ind0(i) for i in path]
+    y = [ind1(i) for i in path]
+    print(x,y)
+    #print(p)
 
 
 if __name__ == "__main__": main()

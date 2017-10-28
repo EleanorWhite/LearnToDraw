@@ -1,6 +1,14 @@
 import cv2
 
 
+def getRedImage(filename):
+    img = cv2.imread(filename)
+
+    # get only the red for every pixel
+    redImg = [[ind0(x) for x in y] for y in img]
+
+    return redImg
+
 
 def getImageArray(filename):
     """This takes in a png filename, and gives out an
@@ -30,7 +38,8 @@ def ind0(arr):
 
 
 def main():
-    print(getImageArray("rectangle.png"))
+    print(getRedImage("ePicture.png"))
+    #print(getImageArray("rectangle.png"))
 
 
 if __name__ == "__main__": main()
