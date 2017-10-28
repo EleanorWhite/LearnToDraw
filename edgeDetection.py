@@ -15,8 +15,8 @@ def getImageArray(filename):
 
     # get coordinates for zero pixels
     coords = []
-    for i in range(len(redImg)):
-        for j in range(len(redImg[i])):
+    for i in range(0,len(redImg),3):
+        for j in range(0,len(redImg[i]),3):
             if redImg[i][j] == 0:
                 coords.append((i,j))
 
